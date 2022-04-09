@@ -1,3 +1,5 @@
+import { AddMovies } from "./addMovie";
+
 export const MoviesList = (props) => {
 
 
@@ -10,6 +12,7 @@ export const MoviesList = (props) => {
         <>
             <h2>Movies List (Array Props)</h2>
 
+            <AddMovies />
             <table>
                 <tr>
                     <th>ID</th>
