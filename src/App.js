@@ -12,13 +12,7 @@ import { MoviesList } from './components/MoviesList';
 function App() {
 
 
-  const movieList = [
-    { id: 1, Title: "John Wick", IMDB: 6 },
-    { id: 2, Title: "Equalizer", IMDB: 5.5 },
-    { id: 3, Title: "Real Steel", IMDB: 6.7 },
-    { id: 4, Title: "Harry Potter", IMDB: 4.8 },
-    { id: 5, Title: "Lord of the Rings", IMDB: 5.2}
-  ]
+
 
   return (
     <div className="App">
@@ -42,7 +36,7 @@ function App() {
           </Route>
 
           <Route path="/movies-list">
-            <MoviesList movies = {movieList} />
+            <MoviesList  />
           </Route>
 
 

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const AddMovies = () => {
+export const AddMovies = (props) => {
 
 
     const [movieId, setMovieId] = useState();
@@ -19,11 +19,10 @@ export const AddMovies = () => {
         setImdbRec(e.target.value);
     }
 
+
     const submitHandle = (e) => {
         e.preventDefault();
-        console.log(movieId);
-        console.log(movieTitle);
-        console.log(imdbRec);
+        props.addMovies();
     }
 
 
