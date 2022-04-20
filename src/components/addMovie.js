@@ -19,7 +19,8 @@ export const AddMovies = (props) => {
     const submitHandle = (e) => {
         e.preventDefault();
         props.addMovies(movieTitle,imdbRec);
-        
+        setMovieTitle('');
+        setImdbRec('');
     }
 
 

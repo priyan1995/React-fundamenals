@@ -18,7 +18,7 @@ export const MoviesList = (props) => {
         
         // spread operator
         setMovieList(moviesList => [...moviesList,{
-            id: Math.random(),
+            id: (Math.random()*10000).toFixed(),
             Title: Mtit,
             IMDB: mimb
         }])
@@ -27,6 +27,10 @@ export const MoviesList = (props) => {
     }
 
 
+    const deleteUser = (id) => {
+        setMovieList(moviesList.filter( movieList => movieList.id != id ));
+    }
+
     return (
         <>
             <h2>Movies List (Array Props)</h2>
@@ -34,7 +38,7 @@ export const MoviesList = (props) => {
             <AddMovies addMovies={addMovies} />
             <table>
                 <tr>
-                    <th>ID</th>
+                    {/* <th>ID</th> */}
                     <th>Title</th>
                     <th>IMDB Record</th>
                 </tr>
@@ -43,9 +47,10 @@ export const MoviesList = (props) => {
                     moviesList.map(movie => {
                         return (
                             <tr key={movie.id}>
-                                <td>{movie.id}</td>
+                                {/* <td>{movie.id}</td> */}
                                 <td>{movie.Title}</td>
                                 <td>{movie.IMDB}</td>
+                                <td><button onClick={()=> { deleteUser(movie.id)} }>Delete</button></td>
                             </tr>
                         )
                     })
