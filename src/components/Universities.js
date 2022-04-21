@@ -3,14 +3,19 @@ import { useEffect, useState } from "react"
 
 export const Universities = () => {
 
-    const [universities, setUniversites] = useState();
+    const [universities, setUniversites] = useState([]);
+    const url = `http://universities.hipolabs.com/search?country=United+States`;
 
     useEffect(() => {
-        axios.get('http://universities.hipolabs.com/search?country=United+States')
+        axios.get(url)
             .then(res => {
-                // console.log(res.data)
+                 console.log(res.data)
                 setUniversites(res.data);
             })
+
+
+
+
     }, [])
 
 
@@ -23,11 +28,13 @@ export const Universities = () => {
                 {
                     universities.map(uni => {
                         return (
-                       <tr>
-                           <td>{uni.country}</td>
-                           <td>{uni.name}</td>
-                       </tr>
-                    )
+                            <>
+                                <tr>
+                                    <td>{uni.country}</td>
+                                    <td>{uni.name}</td>
+                                </tr>
+                            </>
+                        )
                     })
                 }
             </table>
