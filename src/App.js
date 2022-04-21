@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { Home } from './components/Home';
 import { MoviesList } from './components/MoviesList';
+import { Universities } from './components/Universities';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
           </Route>
 
           <Route path="/student-list">
-          <h2>Student List (Individual Props)</h2>
+            <h2>Student List (Individual Props)</h2>
             <Students name="Lorem" age="22" subject="English" />
             <Students name="Ipsum" age="20" subject="Tamil" />
             <Students name="Doler" age="25" subject="Spanish" />
@@ -36,7 +37,11 @@ function App() {
           </Route>
 
           <Route path="/movies-list">
-            <MoviesList  />
+            <MoviesList />
+          </Route>
+
+          <Route path="/universities">
+            <Universities />
           </Route>
 
 

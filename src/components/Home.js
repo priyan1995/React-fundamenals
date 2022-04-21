@@ -12,6 +12,9 @@ export const Home = () => {
                 <li>
                     <Link to="/movies-list">Movies List (Array Props)</Link>
                 </li>
+                <li>
+                    <Link to="/universities">Universities (Dummy data from API)</Link>
+                </li>
             </ul>
         </div>
         </>
