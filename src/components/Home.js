@@ -15,6 +15,9 @@ export const Home = () => {
                 <li>
                     <Link to="/universities">Universities (Dummy data from API)</Link>
                 </li>
+                <li>
+                    <Link to="/country-list">Countries (Component Break and Props)</Link>
+                </li>
             </ul>
         </div>
         </>
