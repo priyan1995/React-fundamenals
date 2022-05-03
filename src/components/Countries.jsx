@@ -4,9 +4,12 @@ import { AddCountryForm } from './Common-Components/AddCountryForm';
 export const Countries = () => {
     return (
         <>
-            <h2>Countries</h2>
 
-            <AddCountryForm />
+            <div className="pd-common-container">
+                <h2>Countries</h2>
+
+                <AddCountryForm />
+            </div>
         </>
     )
 }
