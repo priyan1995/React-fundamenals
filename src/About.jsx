@@ -1,5 +1,6 @@
 import React from 'react';
 import Rainbow from './components/hoc/Rainbow';
+import '././App.css';
 
 const About = () =>{
     return(
