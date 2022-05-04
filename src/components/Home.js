@@ -18,6 +18,9 @@ export const Home = () => {
                 <li>
                     <Link to="/country-list">Countries (Component Break and Props)</Link>
                 </li>
+                <li>
+                    <Link to="/about">About (Higher Order Component)</Link>
+                </li>
             </ul>
         </div>
         </>

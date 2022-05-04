@@ -10,6 +10,7 @@ import { Home } from './components/Home';
 import { MoviesList } from './components/MoviesList';
 import { Universities } from './components/Universities';
 import { Countries } from './components/Countries';
+import About from './About';
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
 
           <Route path="/country-list">
             <Countries />
+          </Route>
+
+          <Route path="/about">
+            <About />
           </Route>
 
 
