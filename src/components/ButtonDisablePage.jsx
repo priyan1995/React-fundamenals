@@ -3,7 +3,7 @@ import ButtonOne from './Common-Components/ButtonOne';
 
 const ButtonPageUi = () => {
     return (
-        <ButtonOne />
+        <ButtonOne disable />
     )
 }
 
