@@ -11,6 +11,7 @@ import { MoviesList } from './components/MoviesList';
 import { Universities } from './components/Universities';
 import { Countries } from './components/Countries';
 import About from './About';
+import ButtonOne from './components/ButtonOne';
 
 function App() {
 
@@ -52,6 +53,10 @@ function App() {
 
           <Route path="/about">
             <About />
+          </Route>
+
+          <Route path="/button-one">
+            <ButtonOne />
           </Route>
 
 

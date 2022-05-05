@@ -21,6 +21,9 @@ export const Home = () => {
                 <li>
                     <Link to="/about">About (Higher Order Component)</Link>
                 </li>
+                <li>
+                    <Link to="/button-one">About (Higher Order Component button)</Link>
+                </li>
             </ul>
         </div>
         </>
