@@ -22,7 +22,7 @@ export const Home = () => {
                     <Link to="/about">About (Higher Order Component)</Link>
                 </li>
                 <li>
-                    <Link to="/button-one">About (Higher Order Component button)</Link>
+                    <Link to="/button-page">About (Higher Order Component button)</Link>
                 </li>
             </ul>
         </div>

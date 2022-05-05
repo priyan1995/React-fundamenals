@@ -11,7 +11,7 @@ import { MoviesList } from './components/MoviesList';
 import { Universities } from './components/Universities';
 import { Countries } from './components/Countries';
 import About from './About';
-import ButtonOne from './components/ButtonOne';
+import ButtonPageUi from './components/ButtonDisablePage';
 
 function App() {
 
@@ -55,8 +55,8 @@ function App() {
             <About />
           </Route>
 
-          <Route path="/button-one">
-            <ButtonOne />
+          <Route path="/button-page">
+            <ButtonPageUi />
           </Route>
 
 
