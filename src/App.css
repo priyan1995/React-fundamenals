@@ -10,3 +10,9 @@ td {
 .pd-common-container{
   padding: 3% 5%;
 }
+
+.pd-card-image{
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
