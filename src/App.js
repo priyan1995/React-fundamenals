@@ -12,6 +12,7 @@ import { Universities } from './components/Universities';
 import { Countries } from './components/Countries';
 import About from './About';
 import ButtonPageUi from './components/ButtonDisablePage';
+import BootstrapLoginForm from './components/React-bootstrap/LoginForm';
 
 function App() {
 
@@ -58,6 +59,11 @@ function App() {
           <Route path="/button-page">
             <ButtonPageUi />
           </Route>
+
+          <Route path="/login-form">
+            <BootstrapLoginForm />
+          </Route>
+
 
 
         </Switch>
