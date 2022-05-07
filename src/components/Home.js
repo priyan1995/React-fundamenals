@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 
 export const Home = () => {
     return (
@@ -29,6 +30,7 @@ export const Home = () => {
                     </li>
 
                 </ul>
+              
             </div>
         </>
     )
