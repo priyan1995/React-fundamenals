@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, Row, Col } from 'react-bootstrap';
 import CommonButton from '../UiElements/CommonButton';
+import UiFormInput from '../UiElements/FormInput';
 
 const LoginFormUi = () => {
     return (
@@ -12,25 +13,24 @@ const LoginFormUi = () => {
                 <Form>
                     <Row>
                         <Col md="6">
-                            <Form.Group>
-                                <Form.Label>Email Address</Form.Label>
-                                <Form.Control type="email" placeholder="example@gmail.com" />
-                                <Form.Text className="text-muted">
-                                    We'll never share your email address. Trust us!
-                                </Form.Text>
-                            </Form.Group>
+                           <UiFormInput
+                           label="Email Address"
+                           type="email"
+                           placeholder ="example@gmail.com"
+                           smallText=" We'll never share your email address. Trust us!"
+                            />
                         </Col>
 
                         <Col md="6">
-                            <Form.Group>
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="password" />
-                                <Form.Text className="text-muted">
-                                    Password must contain at least 5 characters
-                                </Form.Text>
-                            </Form.Group>
-                        </Col>
+                           <UiFormInput
+                           label="Password"
+                           type="password"
+                           placeholder ="password"
+                           smallText=" Password must contain at least 5 characters"
+                            />
+                        </Col>                     
 
+                    
                         <Col md="3">
                             <CommonButton
                                 buttonClass="primary w-100 mt-3"
