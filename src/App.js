@@ -14,6 +14,7 @@ import About from './About';
 import ButtonPageUi from './components/ButtonDisablePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardsList from './components/React-bootstrap/CardList';
+import LoginFormUi from './components/React-bootstrap/FormUi';
 
 function App() {
 
@@ -63,6 +64,10 @@ function App() {
 
           <Route path="/cards-list">
             <CardsList />
+          </Route>
+
+          <Route path="/login-form" >
+            <LoginFormUi />
           </Route>
 
 

@@ -28,6 +28,9 @@ export const Home = () => {
                     <li>
                         <Link to="/cards-list">Cards List (Bootstrap Components)</Link>
                     </li>
+                    <li>
+                        <Link to="/login-form">Login Form (Bootstrap Components)</Link>
+                    </li>
 
                 </ul>
               
