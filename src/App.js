@@ -12,8 +12,8 @@ import { Universities } from './components/Universities';
 import { Countries } from './components/Countries';
 import About from './About';
 import ButtonPageUi from './components/ButtonDisablePage';
-import BootstrapLoginForm from './components/React-bootstrap/LoginForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CardsList from './components/React-bootstrap/CardList';
 
 function App() {
 
@@ -61,8 +61,8 @@ function App() {
             <ButtonPageUi />
           </Route>
 
-          <Route path="/login-form">
-            <BootstrapLoginForm />
+          <Route path="/cards-list">
+            <CardsList />
           </Route>
 
 

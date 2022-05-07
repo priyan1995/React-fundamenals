@@ -26,7 +26,7 @@ export const Home = () => {
                         <Link to="/button-page">About (Higher Order Component button)</Link>
                     </li>
                     <li>
-                        <Link to="/login-form">Login Form (Bootstrap Components)</Link>
+                        <Link to="/cards-list">Cards List (Bootstrap Components)</Link>
                     </li>
 
                 </ul>
