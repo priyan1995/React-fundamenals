@@ -15,6 +15,7 @@ import ButtonPageUi from './components/ButtonDisablePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardsList from './components/React-bootstrap/CardList';
 import LoginFormUi from './components/React-bootstrap/FormUi';
+import MaterialUiElements from './components/MaterialUi/MatirialUiElements';
 
 function App() {
 
@@ -68,6 +69,10 @@ function App() {
 
           <Route path="/login-form" >
             <LoginFormUi />
+          </Route>
+
+          <Route path="/material-ui-elements">
+            <MaterialUiElements />
           </Route>
 
 

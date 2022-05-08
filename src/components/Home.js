@@ -31,6 +31,10 @@ export const Home = () => {
                     <li>
                         <Link to="/login-form">Login Form (Bootstrap Components)</Link>
                     </li>
+                    <li>
+                        <Link to="/material-ui-elements">Material Ui Elements</Link>
+                    </li>
+                    
 
                 </ul>
               
