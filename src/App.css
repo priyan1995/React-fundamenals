@@ -16,3 +16,7 @@ td {
   object-fit: cover;
   object-position: center;
 }
+
+.pd-mui-wrapper{
+  padding:5%
+}
