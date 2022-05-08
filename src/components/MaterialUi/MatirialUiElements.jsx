@@ -1,11 +1,12 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import { MaterialUiCheckbox } from './CommonElements/MaterialUiCheckbox';
+import { MuiButtonGroup } from './CommonElements/MaterialUiButtonGroup';
 import DeleteIcon from '@material-ui/icons/Delete';
 import SaveIcon from '@material-ui/icons/Save';
-import { MaterialUiCheckbox } from './MaterialUiCheckbox';
+import Textfield from '@material-ui/core/Textfield';
+import { MuiForm } from './MaterialForm';
 
 
 const MaterialUiElements = () => {
@@ -18,27 +19,23 @@ const MaterialUiElements = () => {
 
                         <MaterialUiCheckbox />
 
-                        <ButtonGroup>
+                        <MuiButtonGroup
+                            buttonOneText="Save"
+                            buttonOneIcon={<SaveIcon />}
+                            buttonOneSize="large"
+                            buttonOneVariant="contained"
+                            buttonOneColor="primary"
 
-                            <Button
-                                startIcon={<SaveIcon />}
-                                size="large"
-                                variant="contained"
-                                color="primary"
-                            >
-                                Save
-                            </Button>
+                            buttonTwoText="Discard"
+                            buttonTwoIcon={<DeleteIcon />}
+                            buttonTwoSize="large"
+                            buttonTwoVariant="contained"
+                            buttonTwoColor="secondary"
+                        />
 
-                            <Button
-                                startIcon={<DeleteIcon />}
-                                size="large"
-                                variant="contained"
-                                color="secondary"
-                            >
-                                Discard
-                            </Button>
+                        <MuiForm />
 
-                        </ButtonGroup>
+
 
                     </Grid>
                 </Grid>

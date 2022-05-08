@@ -20,3 +20,12 @@ td {
 .pd-mui-wrapper{
   padding:5%
 }
+
+.pd-Mui-form-wrapper{
+  margin-top: 30px;
+}
+
+.MuiFormControl-root{
+  padding-right: 15px !important;
+  margin: 18px 0 !important;
+}
