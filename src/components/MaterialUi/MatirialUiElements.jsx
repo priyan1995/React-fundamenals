@@ -7,42 +7,56 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import SaveIcon from '@material-ui/icons/Save';
 import Textfield from '@material-ui/core/Textfield';
 import { MuiForm } from './MaterialForm';
+import Typography from '@material-ui/core/Typography';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 
+const themeMain = createMuiTheme({
+    typography: {
+        h3: {
+            fontSize: 36,
+            marginBottom:15
+        }
+    }
+})
 
 const MaterialUiElements = () => {
     return (
-        <div className='pd-mui-wrapper'>
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} >
-                        <h2>MUI Elements</h2>
+        <ThemeProvider theme={themeMain}>
+            <div className='pd-mui-wrapper'>
+                <Box sx={{ flexGrow: 1 }}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} >
+                            <Typography variant="h3" component="div">
+                                MUI Elements
+                            </Typography>
 
-                        <MaterialUiCheckbox />
+                            <MaterialUiCheckbox />
 
-                        <MuiButtonGroup
-                            buttonOneText="Save"
-                            buttonOneIcon={<SaveIcon />}
-                            buttonOneSize="large"
-                            buttonOneVariant="contained"
-                            buttonOneColor="primary"
+                            <MuiButtonGroup
+                                buttonOneText="Save"
+                                buttonOneIcon={<SaveIcon />}
+                                buttonOneSize="large"
+                                buttonOneVariant="contained"
+                                buttonOneColor="primary"
 
-                            buttonTwoText="Discard"
-                            buttonTwoIcon={<DeleteIcon />}
-                            buttonTwoSize="large"
-                            buttonTwoVariant="contained"
-                            buttonTwoColor="secondary"
-                        />
+                                buttonTwoText="Discard"
+                                buttonTwoIcon={<DeleteIcon />}
+                                buttonTwoSize="large"
+                                buttonTwoVariant="contained"
+                                buttonTwoColor="secondary"
+                            />
 
-                        <MuiForm />
+                            <MuiForm />
 
 
 
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Box>
+                </Box>
 
 
-        </div>
+            </div>
+        </ThemeProvider>
     )
 }
 

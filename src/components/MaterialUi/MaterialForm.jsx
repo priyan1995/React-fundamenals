@@ -4,6 +4,9 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import { blue } from '@material-ui/core/colors';
+// add google font for MUI (npm add fontsource-popins)
+import 'fontsource-poppins';
+
 
 const useStyles = makeStyles({
     root: {
