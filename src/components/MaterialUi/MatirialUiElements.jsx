@@ -9,12 +9,13 @@ import Textfield from '@material-ui/core/Textfield';
 import { MuiForm } from './MaterialForm';
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
 
 const themeMain = createMuiTheme({
     typography: {
         h3: {
             fontSize: 36,
-            marginBottom:15
+            marginBottom: 15
         }
     }
 })
@@ -22,40 +23,42 @@ const themeMain = createMuiTheme({
 const MaterialUiElements = () => {
     return (
         <ThemeProvider theme={themeMain}>
-            <div className='pd-mui-wrapper'>
-                <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} >
-                            <Typography variant="h3" component="div">
-                                MUI Elements
-                            </Typography>
+            <Container>
+                <div className='pd-mui-wrapper'>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} >
+                                <Typography variant="h3" component="div">
+                                    MUI Elements
+                                </Typography>
 
-                            <MaterialUiCheckbox />
+                                <MaterialUiCheckbox />
 
-                            <MuiButtonGroup
-                                buttonOneText="Save"
-                                buttonOneIcon={<SaveIcon />}
-                                buttonOneSize="large"
-                                buttonOneVariant="contained"
-                                buttonOneColor="primary"
+                                <MuiButtonGroup
+                                    buttonOneText="Save"
+                                    buttonOneIcon={<SaveIcon />}
+                                    buttonOneSize="large"
+                                    buttonOneVariant="contained"
+                                    buttonOneColor="primary"
 
-                                buttonTwoText="Discard"
-                                buttonTwoIcon={<DeleteIcon />}
-                                buttonTwoSize="large"
-                                buttonTwoVariant="contained"
-                                buttonTwoColor="secondary"
-                            />
+                                    buttonTwoText="Discard"
+                                    buttonTwoIcon={<DeleteIcon />}
+                                    buttonTwoSize="large"
+                                    buttonTwoVariant="contained"
+                                    buttonTwoColor="secondary"
+                                />
 
-                            <MuiForm />
+                                <MuiForm />
 
 
 
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Box>
+                    </Box>
 
 
-            </div>
+                </div>
+            </Container>
         </ThemeProvider>
     )
 }
