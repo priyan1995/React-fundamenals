@@ -10,6 +10,7 @@ import { MuiForm } from './MaterialForm';
 import Typography from '@material-ui/core/Typography';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
+import Paper from '@material-ui/core/Paper';
 
 const themeMain = createMuiTheme({
     typography: {
@@ -23,7 +24,7 @@ const themeMain = createMuiTheme({
 const MaterialUiElements = () => {
     return (
         <ThemeProvider theme={themeMain}>
-            <Container>
+            <Container maxWidth="lg">
                 <div className='pd-mui-wrapper'>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
@@ -31,6 +32,8 @@ const MaterialUiElements = () => {
                                 <Typography variant="h3" component="div">
                                     MUI Elements
                                 </Typography>
+
+
 
                                 <MaterialUiCheckbox />
 
@@ -47,6 +50,18 @@ const MaterialUiElements = () => {
                                     buttonTwoVariant="contained"
                                     buttonTwoColor="secondary"
                                 />
+
+                                <Grid container spacing={4} justify="center" style={{ marginTop: 30, marginBottom: 30 }}>
+                                    <Grid item xs={12} md={4} lg={4}>
+                                        <Paper style={{ height: 95, width: '100%', background: "#f7f7f7" }} />
+                                    </Grid>
+                                    <Grid item xs={12} md={4} lg={4}>
+                                        <Paper style={{ height: 95, width: '100%', background: "#f7f7f7" }} />
+                                    </Grid>
+                                    <Grid item xs={12} md={4} lg={4}>
+                                        <Paper style={{ height: 95, width: '100%', background: "#f7f7f7" }} />
+                                    </Grid>
+                                </Grid>
 
                                 <MuiForm />
 
