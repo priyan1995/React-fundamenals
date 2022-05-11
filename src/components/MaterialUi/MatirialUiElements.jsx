@@ -8,9 +8,10 @@ import SaveIcon from '@material-ui/icons/Save';
 import Textfield from '@material-ui/core/Textfield';
 import { MuiForm } from './MaterialForm';
 import Typography from '@material-ui/core/Typography';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { AppBar, createMuiTheme, IconButton, ThemeProvider, Toolbar } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const themeMain = createMuiTheme({
     typography: {
@@ -25,6 +26,17 @@ const MaterialUiElements = () => {
     return (
         <ThemeProvider theme={themeMain}>
             <Container maxWidth="lg">
+                <AppBar>
+                    <Toolbar>
+                        <IconButton>
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant="h6">
+                            MUI Theming
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+
                 <div className='pd-mui-wrapper'>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
@@ -64,8 +76,6 @@ const MaterialUiElements = () => {
                                 </Grid>
 
                                 <MuiForm />
-
-
 
                             </Grid>
                         </Grid>
