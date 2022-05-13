@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardsList from './components/React-bootstrap/CardList';
 import LoginFormUi from './components/React-bootstrap/FormUi';
 import MaterialUiElements from './components/MaterialUi/MatirialUiElements';
+import { SlickSlider } from './components/Slick/SlickSlider';
 
 function App() {
 
@@ -75,6 +76,10 @@ function App() {
             <MaterialUiElements />
           </Route>
 
+          <Route path="/slick-slider">
+            <SlickSlider />
+          </Route>
+
 
 
         </Switch>
@@ -82,7 +87,7 @@ function App() {
 
       </Router>
 
-    
+
     </div>
   );
 }
