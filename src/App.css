@@ -29,3 +29,20 @@ td {
   padding-right: 15px !important;
   margin: 18px 0 !important;
 }
+
+.pd-slick-sl{
+  text-align: center;
+}
+
+.pd-slick-sl img{
+  width: 100%;
+  height:80vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pd-back-bread{
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+}

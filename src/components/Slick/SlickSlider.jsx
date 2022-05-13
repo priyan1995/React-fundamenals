@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick/lib/slider';
+import { Link } from 'react-router-dom';
+// import sliderImageSlick from "https://picsum.photos/200";
+
 
 export const SlickSlider = () => {
 
@@ -14,26 +16,56 @@ export const SlickSlider = () => {
         slidesToScroll: 1
     };
 
+    const sliderImages = [
+        {     
+            id: '1',
+            url: "https://api.lorem.space/image/shoes?w=2000"
+        },
+        {
+            id: '2',
+            url: "https://api.lorem.space/image/watch?w=2000"
+        },
+        {
+            id: '3',
+            url: "https://api.lorem.space/image/furniture?w=2000"
+        },
+        {
+            id: '4',
+            url: "https://api.lorem.space/image/pizza?w=2000"
+        },
+        {
+            id: '5',
+            url: "https://api.lorem.space/image/car?w=2000"
+        },
+        {
+            id: '6',
+            url: "https://api.lorem.space/image/house?w=2000"
+        }
+
+        
+    ]
+
 
     return (
         <>
-            <Container>
-                <h2>Slick Slider</h2>
+          
                 <Slider {...settings}>
-                    <div>
-                        <h3>1</h3>
-                    </div>
-                    <div>
-                        <h3>2</h3>
-                    </div>
-                    <div>
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <h3>4</h3>
-                    </div>
+
+                    {
+                        sliderImages.map(sliderImg => {
+                            return (
+                                <div key={sliderImg.id} className="pd-slick-sl">
+                                    <img src={sliderImg.url} />
+                                </div>
+                            )
+                        })
+                    }
                 </Slider>
-            </Container>
+
+                <div className='pd-back-bread'>
+                    <Link to='/'>Home</Link>
+                </div>
+            
         </>
     )
 }
