@@ -46,3 +46,21 @@ td {
   display: block;
   text-align: center;
 }
+
+.slick-next {
+  right: 0 !important;
+  z-index: 9;
+}
+
+.slick-prev {
+  left: 0 !important;
+  z-index: 9;
+}
+
+.pd-slder-arrow{
+  background: #2a2a2a6b;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

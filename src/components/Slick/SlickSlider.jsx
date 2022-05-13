@@ -3,21 +3,49 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick/lib/slider';
 import { Link } from 'react-router-dom';
-// import sliderImageSlick from "https://picsum.photos/200";
+import SampleNextArrow from '../Common-Components/SlickNextArrow';
 
 
 export const SlickSlider = () => {
 
+    const SamplePrevArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style }}
+                onClick={onClick}
+            />
+        );
+    }
+
+
+
+
+
     var settings = {
         dots: true,
         infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
+        speed: 1000,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        margin: 0,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        nextArrow: 
+        <SampleNextArrow
+        className="pd-slder-arrow" 
+        />,
+        prevArrow: <SamplePrevArrow
+        className="pd-slder-arrow" 
+         />
+
     };
 
+
+
     const sliderImages = [
-        {     
+        {
             id: '1',
             url: "https://api.lorem.space/image/shoes?w=2000"
         },
@@ -42,30 +70,30 @@ export const SlickSlider = () => {
             url: "https://api.lorem.space/image/house?w=2000"
         }
 
-        
+
     ]
 
 
     return (
         <>
-          
-                <Slider {...settings}>
 
-                    {
-                        sliderImages.map(sliderImg => {
-                            return (
-                                <div key={sliderImg.id} className="pd-slick-sl">
-                                    <img src={sliderImg.url} />
-                                </div>
-                            )
-                        })
-                    }
-                </Slider>
+            <Slider {...settings}>
 
-                <div className='pd-back-bread'>
-                    <Link to='/'>Home</Link>
-                </div>
-            
+                {
+                    sliderImages.map(sliderImg => {
+                        return (
+                            <div key={sliderImg.id} className="pd-slick-sl">
+                                <img src={sliderImg.url} />
+                            </div>
+                        )
+                    })
+                }
+            </Slider>
+
+            <div className='pd-back-bread'>
+                <Link to='/'>Home</Link>
+            </div>
+
         </>
     )
 }
