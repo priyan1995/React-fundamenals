@@ -4,16 +4,20 @@ import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+import useInput from '../Hooks/useInput';
 
 export const UserForm = () => {
 
-    const [username, setusername] = useState('');
-    const [email, setEmail] = useState('');
+    const [username, bindUsername, resetUsername] = useInput('');
+    const [email, bindEmail, resetEmail] = useInput('')
+
 
     const submitForm = (e) => {
         e.preventDefault();
         console.log(username);
         console.log(email);
+        resetUsername();
+        resetEmail();
     }
 
 
@@ -23,42 +27,45 @@ export const UserForm = () => {
         <>
             <Container>
                 <h2>User Register</h2>
-                <FormControl>
-                    <Box
-                        component="form"
-                        sx={{
-                            '& .MuiTextField-root': { m: 1, width: '100%' },
-                        }}
-                    >
 
-                        <TextField
-                            required
-                            variant="filled"
-                            color="secondary"
-                            label="User Name"
-                            value={username}
-                            onChange={(e) => setusername(e.target.value)}
-                        />
 
-                        <TextField
-                            required
-                            variant="filled"
-                            color="secondary"
-                            type="email"
-                            label="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
+                <Box
+                    component="form"
+                    sx={{
+                        '& .MuiTextField-root': { m: 1, width: '50%' },
+                    }}
+                >
 
-                        <Button
-                            variant="contained"
-                            color="secondary"
-                            onClick={submitForm}
-                        >Submit</Button>
 
-                    </Box>
+                    <TextField
+                        required
+                        variant="filled"
+                        color="secondary"
+                        label="User Name"
+                        {...bindUsername}
+                    />
 
-                </FormControl>
+                    <TextField
+                        required
+                        variant="filled"
+                        color="secondary"
+                        type="email"
+                        label="Email"
+                        {...bindEmail}
+
+                    />
+
+                    <Button
+                        variant="contained"
+                        type="submit"
+                        color="secondary"
+                        onClick={(e) => { submitForm(e) }}
+                    >Submit</Button>
+
+                </Box>
+
+
+
             </Container>
         </>
     )
