@@ -37,6 +37,9 @@ export const Home = () => {
                     <li>
                         <Link to="/slick-slider">Slick Slider</Link>
                     </li>
+                    <li>
+                        <Link to="/user-form">User Form (Custom Hook)</Link>
+                    </li>
                     
 
                 </ul>
