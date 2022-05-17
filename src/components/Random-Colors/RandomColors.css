@@ -1,3 +1,11 @@
 .change-background-btn{
     margin: 20px 0 !important;
 }
+
+.pd-changing-color-div{
+    min-height: 100vh;
+}
+
+.pd-changing-color-div input{
+    background-color: white;
+}
