@@ -1,23 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
+import { useFetch } from "./Hooks/useFetch";
 
 export const Universities = () => {
 
-    const [universities, setUniversites] = useState([]);
-    const url = `http://universities.hipolabs.com/search?country=United+States`;
-
-    useEffect(() => {
-        axios.get(url)
-            .then(res => {
-                 console.log(res.data)
-                setUniversites(res.data);
-            })
-
-
-
-
-    }, [])
-
+    const { fetchedData }= useFetch('http://universities.hipolabs.com/search?country=United+States');
 
     return (
         <>
@@ -26,7 +13,7 @@ export const Universities = () => {
             <table>
 
                 {
-                    universities.map(uni => {
+                    fetchedData.map(uni => {
                         return (
                             <>
                                 <tr>
