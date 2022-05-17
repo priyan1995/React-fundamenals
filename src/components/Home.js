@@ -40,6 +40,9 @@ export const Home = () => {
                     <li>
                         <Link to="/user-form">User Form (Custom Hook)</Link>
                     </li>
+                    <li>
+                        <Link to="/lazy-load">Lazy Load (Code Splitting)</Link>
+                    </li>
                     
 
                 </ul>

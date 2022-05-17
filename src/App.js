@@ -18,6 +18,7 @@ import LoginFormUi from './components/React-bootstrap/FormUi';
 import MaterialUiElements from './components/MaterialUi/MatirialUiElements';
 import { SlickSlider } from './components/Slick/SlickSlider';
 import { UserForm } from './components/User-form/UserForm';
+import { LazyLoadComponent } from './components/Lazy-Load/LazyLoad';
 
 function App() {
 
@@ -83,6 +84,10 @@ function App() {
 
           <Route path="/user-form">
             <UserForm />
+          </Route>
+
+          <Route path="/lazy-load">
+            <LazyLoadComponent />
           </Route>
 
 
