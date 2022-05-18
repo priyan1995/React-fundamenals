@@ -1,0 +1,4 @@
+
+**** <> </> This is shorthand syntax for react Fragment
+<React.Fragment key={item.id}> </React.Fragment>
+fragment doesnt render any Html element to the DOM. Instead it represent as a wrapper to the content inside it
