@@ -1,0 +1,43 @@
+  ******** ---- Study Plan
+
+== React Bootatrap ==================== Done
+== Higher order components
+== Redux
+== Sass
+== Samantic UI
+== Material UI  ======================= Done
+== React Slick Slider ================= Done
+== Create a custom hook =============== Done
+== Spread Operator
+== React functions as childrens
+== Profiler
+== React Mixins
+== React Testing
+
+=================================================
+== Documentation-React
+   -- installation === Done
+   -- Main Concepts == Done  
+   -- Advance Guides 
+   -- API Reference
+   -- Hooks ========== Done
+   -- Testing ======== Done
+   -- Contributing === Done
+   -- FAQ ============ Done
+
+=================================================
+-- Advance Guides
+  - Accessibility ===================== Done 
+  - Code-Splitting ==================== Done
+  - Context =========================== Done
+  - Error Boundaries ================== Done
+  - Forwarding Refs =================== Done
+  - Fragments ========================= Done
+  - Higher-Order Components =========== Done
+  - Integrating with Other Libraries == Done
+  - JSX In Depth ====================== Done
+  - Optimizing Performance ============ Done
+  - Portals =========================== Done
+  - Profiler ========================== Done
+  - React Without ES6 ================= Done
+
