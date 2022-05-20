@@ -13,6 +13,9 @@
 == Profiler
 == React Mixins
 == React Testing
+== Render Props
+== Auto complete search field
+== React flow
 
 =================================================
 == Documentation-React
@@ -40,4 +43,9 @@
   - Portals =========================== Done
   - Profiler ========================== Done
   - React Without ES6 ================= Done
+  - React Without JSX ================= Done
+  - Reconciliation ==================== Done
+  - Refs and the DOM ================== Done
+  - Render Props ====================== Done 
+  - Static Type Checking ============== Done
 
