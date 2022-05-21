@@ -43,6 +43,9 @@ export const Home = () => {
                     <li>
                         <Link to="/lazy-load">Lazy Load (Code Splitting)</Link>
                     </li>
+                    <li>
+                        <Link to="/calculator">Calculator</Link>
+                    </li>
                     
 
                 </ul>

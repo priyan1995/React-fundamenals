@@ -1,5 +1,6 @@
   ******** ---- Study Plan
 
+------- Deep Study ---------
 == React Bootatrap ==================== Done
 == Higher order components
 == Redux
@@ -16,12 +17,14 @@
 == Render Props
 == Auto complete search field
 == React flow
+== Strict Mode
+== Web Components
 
 =================================================
 == Documentation-React
    -- installation === Done
    -- Main Concepts == Done  
-   -- Advance Guides 
+   -- Advance Guides = Done
    -- API Reference
    -- Hooks ========== Done
    -- Testing ======== Done
@@ -48,4 +51,7 @@
   - Refs and the DOM ================== Done
   - Render Props ====================== Done 
   - Static Type Checking ============== Done
+  - Strict Mode ======================= Done
+  - Typechecking With PropTypes ======= Done
+  - Uncontrolled Components =========== Done
 

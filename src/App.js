@@ -19,6 +19,7 @@ import MaterialUiElements from './components/MaterialUi/MatirialUiElements';
 import { SlickSlider } from './components/Slick/SlickSlider';
 import { UserForm } from './components/User-form/UserForm';
 import { LazyLoadComponent } from './components/Lazy-Load/LazyLoad';
+import { Calculator } from './calculator';
 
 function App() {
 
@@ -88,6 +89,10 @@ function App() {
 
           <Route path="/lazy-load">
             <LazyLoadComponent />
+          </Route>
+
+          <Route path="/calculator">
+            <Calculator />
           </Route>
 
 
