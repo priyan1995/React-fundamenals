@@ -29,6 +29,15 @@ export const Calculator = () => {
         setCalc(eval(calc).toString());
     }
 
+    const deleteValue = () => {
+        if (calc == '') {
+            return;
+        }
+        const value = calc.slice(0, -1);
+
+        setCalc(value)
+    }
+
 
     const createDigits = () => {
 
@@ -63,7 +72,7 @@ export const Calculator = () => {
                         <button onClick={() => updateCalc('*')}>*</button>
                         <button onClick={() => updateCalc('-')}>-</button>
                         <button onClick={() => updateCalc('+')}>+</button>
-                        <button >DEL</button>
+                        <button onClick={deleteValue}>DEL</button>
                     </div>
 
                     <div className="pd-calc-digits">
