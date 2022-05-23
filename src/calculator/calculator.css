@@ -1,0 +1,65 @@
+.pd-calc-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222222;
+}
+
+.pd-calculator{
+    background: #374353;
+}
+
+.pd-calc-digits,
+.pd-calc-operators{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pd-calc-digits button{
+    flex: 0 0 33.33%;
+    min-width: 33.33%;
+    color: white;
+    background: #374353;
+    min-height: 45px;
+}
+
+.pd-calc-operators button{
+    flex: 0 0 20%;
+    min-width: 20%;
+    color: white;
+    background: #374353;
+    min-height: 45px;
+}
+
+.pd-calc-display{
+    color: white;
+    padding: 20px;
+    background: #373737;
+}
+
+.pd-calc-display span:first-child{
+    color: #9c9c9c;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+button{
+    transition: 0.5s all;
+    border: none;
+}
+
+button:hover{
+    transition: 0.5s all;
+    background: #455366;
+}
+
+.pd-calc-operators button:last-child{
+    background: #602020;
+    transition: 0.5s;
+}
+
+.pd-calc-operators button:last-child:hover{
+    background: #753131;
+    transition: 0.5s;
+}
