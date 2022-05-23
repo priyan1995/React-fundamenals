@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import Digits from '../components/Calculator/Digits';
+import { DigitsCalculations } from '../components/Calculator/DigitsCalculation';
+import { Display } from '../components/Calculator/Display';
+import { Operators } from '../components/Calculator/Operators';
 import './calculator.css';
 
 export const Calculator = () => {
@@ -7,8 +9,7 @@ export const Calculator = () => {
     const [calc, setCalc] = useState("");
     const [result, setResult] = useState("");
 
-    const ops = ["+", "/", "*", "-", "0"]
-
+    const ops = ["+", "/", "*", "-", "0"];
 
     const updateCalc = (value) => {
 
@@ -46,25 +47,20 @@ export const Calculator = () => {
             <div className="pd-calc-wrapper">
                 <div className="pd-calculator">
 
-                    <div className="pd-calc-display">
-                        {result ? <span>({result})</span> : ''}
-                        <span>{calc || "0"}</span>
-                    </div>
+                    <Display
+                        result={result}
+                        calc={calc}
+                    />
 
-                    <div className="pd-calc-operators">
-                        <button onClick={() => updateCalc('/')}>/</button>
-                        <button onClick={() => updateCalc('*')}>*</button>
-                        <button onClick={() => updateCalc('-')}>-</button>
-                        <button onClick={() => updateCalc('+')}>+</button>
-                        <button onClick={deleteValue}>DEL</button>
-                    </div>
+                    <Operators
+                        updateCalc={updateCalc}
+                        deleteValue={deleteValue}
+                    />
 
-                    <div className="pd-calc-digits">
-                        <Digits updateCalc={updateCalc} />
-                        <button onClick={() => updateCalc('0')}>0</button>
-                        <button onClick={() => updateCalc('.')}>.</button>
-                        <button onClick={calculate}>=</button>
-                    </div>
+                    <DigitsCalculations
+                        updateCalc={updateCalc}
+                        calculate={calculate}
+                    />
 
                 </div>
             </div>
