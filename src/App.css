@@ -1,4 +1,4 @@
-.text-left{
+.text-left {
   text-align: left;
 }
 
@@ -7,41 +7,41 @@ td {
   padding: 7px;
 }
 
-.pd-common-container{
+.pd-common-container {
   padding: 3% 5%;
 }
 
-.pd-card-image{
+.pd-card-image {
   height: 300px;
   object-fit: cover;
   object-position: center;
 }
 
-.pd-mui-wrapper{
-  padding:5% 0;
+.pd-mui-wrapper {
+  padding: 5% 0;
 }
 
-.pd-Mui-form-wrapper{
+.pd-Mui-form-wrapper {
   margin-top: 30px;
 }
 
-.MuiFormControl-root{
+.MuiFormControl-root {
   padding-right: 15px !important;
   margin: 18px 0 !important;
 }
 
-.pd-slick-sl{
+.pd-slick-sl {
   text-align: center;
 }
 
-.pd-slick-sl img{
+.pd-slick-sl img {
   width: 100%;
-  height:80vh;
+  height: 80vh;
   object-fit: cover;
   object-position: center;
 }
 
-.pd-back-bread{
+.pd-back-bread {
   margin-top: 30px;
   display: block;
   text-align: center;
@@ -57,10 +57,20 @@ td {
   z-index: 9;
 }
 
-.pd-slder-arrow{
+.pd-slder-arrow {
   background: #2a2a2a6b;
   padding: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.go-home-btn {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.go-home-btn a {
+  display: inline-block;
 }

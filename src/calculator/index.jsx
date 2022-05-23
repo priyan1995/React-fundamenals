@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DigitsCalculations } from '../components/Calculator/DigitsCalculation';
 import { Display } from '../components/Calculator/Display';
 import { Operators } from '../components/Calculator/Operators';
+import { GoHomeButton } from '../components/Common-Components/GoHomeButton';
 import './calculator.css';
 
 export const Calculator = () => {
@@ -64,6 +65,8 @@ export const Calculator = () => {
 
                 </div>
             </div>
+
+            <GoHomeButton />
 
         </>
     )
