@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Digits from '../components/Calculator/Digits';
 import './calculator.css';
 
 export const Calculator = () => {
@@ -39,23 +40,6 @@ export const Calculator = () => {
     }
 
 
-    const createDigits = () => {
-
-        const digits = [];
-
-        for (let i = 1; i < 10; i++) {
-            digits.push(
-                <button
-                    onClick={() => updateCalc(i.toString())}
-                    key={i}>
-                    {i}
-                </button>
-            )
-        }
-
-        return digits;
-    }
-
     return (
         <>
 
@@ -76,7 +60,7 @@ export const Calculator = () => {
                     </div>
 
                     <div className="pd-calc-digits">
-                        {createDigits()}
+                        <Digits updateCalc={updateCalc} />
                         <button onClick={() => updateCalc('0')}>0</button>
                         <button onClick={() => updateCalc('.')}>.</button>
                         <button onClick={calculate}>=</button>
