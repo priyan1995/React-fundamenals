@@ -46,6 +46,10 @@ export const Home = () => {
                     <li>
                         <Link to="/calculator">Calculator</Link>
                     </li>
+
+                    <li>
+                        <Link to="/chat">Chat</Link>
+                    </li>
                     
 
                 </ul>

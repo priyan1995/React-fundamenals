@@ -20,6 +20,7 @@ import { SlickSlider } from './components/Slick/SlickSlider';
 import { UserForm } from './components/User-form/UserForm';
 import { LazyLoadComponent } from './components/Lazy-Load/LazyLoad';
 import { Calculator } from './calculator';
+import { Chat } from './Chat/Chat';
 
 function App() {
 
@@ -95,6 +96,9 @@ function App() {
             <Calculator />
           </Route>
 
+          <Route path="/chat">
+            <Chat />
+          </Route>
 
 
         </Switch>
