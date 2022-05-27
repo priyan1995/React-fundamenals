@@ -1,7 +1,8 @@
 import React from 'react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import firebase from 'firebase/compat/app';
+// import { FirebaseApp } from 'firebase/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 firebase.initializeApp({
     apiKey: "AIzaSyAOgPLp1P4CSKjQEBUsKSuz2aG9eFQ6yh4",
