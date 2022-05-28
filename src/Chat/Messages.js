@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import firebase from 'firebase/compat/app';
 
-export const Messages = (props) => {
+export const Messages = ({user=null, db=null}) => {
 
     const [messages, setMessages] = useState([]);
+    const [newMessage, setNewMessage] = useState('');
 
-    const db = props.db;
-    const user = props.user;
+    const {uid,displayName, photoURL} = user;
 
-    console.log(db);
-    console.log(user);
+   
+
+    // console.log(db);
+    // console.log(user);
 
     useEffect(()=>{
         if(db){
@@ -30,7 +33,29 @@ export const Messages = (props) => {
         }
     },[db]);
 
-    console.log(messages)
+    //console.log(messages);
+    //console.log(newMessage);
+
+    const handleOnChangeMessage = (e) => {
+        setNewMessage(e.target.value);
+    }
+
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+        setNewMessage('')
+
+        if(db){
+            db.collection('Messages').add({
+                text:newMessage,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                uid,
+                displayName,
+                photoURL
+
+        })
+        }
+      
+    }
 
     return(
         <>
@@ -41,6 +66,15 @@ export const Messages = (props) => {
                 ))
             }
         </ul>
+
+        <form onSubmit={handleOnSubmit}>
+            <input
+            type="text" 
+            value={newMessage}
+            onChange={handleOnChangeMessage}
+            placeholder="Type your message here..."/>
+            <button type='submit' disabled={!newMessage}>Send</button>
+        </form>
         </>
     )
 
