@@ -2,7 +2,12 @@ import React from 'react';
 import firebase from 'firebase/compat/app';
 // import { FirebaseApp } from 'firebase/app';
 import 'firebase/compat/auth';
+import 'firebase/auth';
 import 'firebase/compat/firestore';
+import { ChatLoginButton } from '../components/Chat/ChatLoginButton';
+import { getAuth } from 'firebase/auth';
+
+const auth = getAuth();
 
 firebase.initializeApp({
     apiKey: "AIzaSyAOgPLp1P4CSKjQEBUsKSuz2aG9eFQ6yh4",
@@ -14,9 +19,24 @@ firebase.initializeApp({
 })
 
 export const Chat = () => {
+
+    const signInWithGoogle = async() => {
+        //retrieve google provider object
+        const provider = new firebase.auth.GoogleAuthProvider();
+        //set language to the default browser preference
+        auth.useDeviceLanguage();
+        //start sign in process
+        try{
+            await auth.signInWithPopup(provider);
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+
     return(
         <>
-        <h2>Chat</h2>
+        <ChatLoginButton onClick={signInWithGoogle}>Sign In With Google</ChatLoginButton>
         </>
     )
 }
