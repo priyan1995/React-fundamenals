@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ChatLoginButton = (props) => {
+export const ChatButton = (props) => {
     return(
         <>
         <button onClick={props.onClick}>{props.children}</button>

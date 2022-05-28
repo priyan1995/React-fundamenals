@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import firebase from 'firebase/compat/app';
-// import { FirebaseApp } from 'firebase/app';
 import 'firebase/compat/auth';
 import 'firebase/auth';
 import 'firebase/compat/firestore';
-import { ChatLoginButton } from '../components/Chat/ChatLoginButton';
-import { getAuth } from 'firebase/auth';
-import { Unsubscribe } from '@material-ui/icons';
+import { ChatButton, ChatLoginButton } from '../components/Chat/ChatButton';
 
 
 
@@ -55,6 +52,16 @@ export const Chat = () => {
         }
     }
 
+
+    const signOut = async() => {
+        try{
+            await firebase.auth().signOut();
+        } catch(error){
+            console.log(error);
+        }
+    }
+
+
     if (initializing) { return "Loading..."; }
     return (
         <>
@@ -62,12 +69,13 @@ export const Chat = () => {
                 user ? (
                     <>
                         <h4>Welcome to the chat</h4>
+                        <ChatButton onClick={signOut}>Sign Out</ChatButton>
                     </>
 
                 ) : (
 
                     <>
-                        <ChatLoginButton onClick={signInWithGoogle}>Sign In With Google</ChatLoginButton>
+                        <ChatButton onClick={signInWithGoogle}>Sign In With Google</ChatButton>
                     </>
 
                 )
