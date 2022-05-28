@@ -13,7 +13,9 @@ export const ChatList = ({
             <div>
                 {
                     photoURL ?(
+                        <>
                         <img src={photoURL} alt="Avatar" width={45} height={45} />
+                        </>
                     ) : null
                 }
                 { displayName ? <p> {displayName}</p> : null}
