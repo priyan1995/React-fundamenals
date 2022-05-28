@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import firebase from 'firebase/compat/app';
+import { ChatList } from './ChatList';
 
 export const Messages = ({user=null, db=null}) => {
 
@@ -33,7 +34,7 @@ export const Messages = ({user=null, db=null}) => {
         }
     },[db]);
 
-    //console.log(messages);
+    console.log(messages);
     //console.log(newMessage);
 
     const handleOnChangeMessage = (e) => {
@@ -62,7 +63,9 @@ export const Messages = ({user=null, db=null}) => {
         <ul>
             {
                 messages.map(message => (
-                    <li key={message.id}>{message.text}</li>
+                    <li key={message.id}> 
+                    <ChatList {...message} />
+                     </li>
                 ))
             }
         </ul>
