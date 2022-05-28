@@ -3,7 +3,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/auth';
 import 'firebase/compat/firestore';
-import { ChatButton, ChatLoginButton } from '../components/Chat/ChatButton';
+import { ChatButton } from '../components/Chat/ChatButton';
+import { Messages } from './Messages';
 
 
 
@@ -17,6 +18,7 @@ firebase.initializeApp({
 })
 
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 export const Chat = () => {
 
@@ -61,8 +63,11 @@ export const Chat = () => {
         }
     }
 
+    console.log(user);
+
 
     if (initializing) { return "Loading..."; }
+
     return (
         <>
             {
@@ -70,6 +75,7 @@ export const Chat = () => {
                     <>
                         <h4>Welcome to the chat</h4>
                         <ChatButton onClick={signOut}>Sign Out</ChatButton>
+                        <Messages user={user} db={db} />
                     </>
 
                 ) : (
