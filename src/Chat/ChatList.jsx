@@ -1,5 +1,7 @@
+
 import formatRelative from 'date-fns/formatRelative';
-import React from 'react';
+import React, { useState } from 'react';
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,18 +15,22 @@ export const ChatList = ({
 
 }) => {
 
-   // console.log(db)
+    const [openModal, setOpenModal] = useState(false);
+    const handleOpenModal = () => setOpenModal(true);
+    const handleCloseModal = () => setOpenModal(false);
 
-// console.log(id)
+    const deleteClickHandler = (msgid) => {
+        db.collection('Messages').doc(msgid).delete()
+            .then(() => {
+                toast.warn("Message Deleted!", {
+                    theme: "dark",
+                    autoClose: 1000
+                })
+            }).catch(() => {
+                toast.error("Something went wrong!")
+            })
 
-const deleteClickHandler = (msgid) => {
-    db.collection('Messages').doc(msgid).delete()
-    .then(()=>{
-        toast("Message Deleted!");
-    }).catch(()=>{
-        toast.error("Something went wrong!")
-    })
-}
+    }
 
     return (
         <>
@@ -52,12 +58,29 @@ const deleteClickHandler = (msgid) => {
                     <p className='pd-message'>{text}</p>
                 </div>
 
-                <button onClick={() => deleteClickHandler(id)}>Delete Message</button>
+                <button onClick={() => handleOpenModal()}>Delete Message</button>
 
-               
+
 
             </div>
             <ToastContainer />
+
+            <Modal show={openModal} onHide={handleCloseModal}>
+                <ModalHeader closeButton>
+                    <ModalTitle>Delete Message</ModalTitle>
+                </ModalHeader>
+                <ModalBody>Are you sure want to delete this message ?</ModalBody>
+                <ModalFooter>
+                    <Button variant='primary' onClick={() => deleteClickHandler(id)}>
+                        Yes
+                    </Button>
+                    <Button variant='danger' onClick={handleCloseModal}>
+                        No
+                    </Button>
+                </ModalFooter>
+            </Modal>
+
+
         </>
     )
 }
