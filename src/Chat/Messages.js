@@ -68,7 +68,7 @@ export const Messages = ({ user = null, db = null }) => {
                 }
             </ul>
 
-            <form onSubmit={handleOnSubmit}>
+            <form onSubmit={handleOnSubmit} className="pd-send-message-form">
                 <input
                     type="text"
                     value={newMessage}

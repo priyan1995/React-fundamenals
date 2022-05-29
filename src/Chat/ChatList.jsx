@@ -10,26 +10,29 @@ export const ChatList = ({
 }) => {
     return (
         <>
-            <div>
+            <div className='pd-message-item'>
                 {
-                    photoURL ?(
+                    photoURL ? (
                         <>
-                        <img src={photoURL} alt="Avatar" width={45} height={45} />
+                            <img src={photoURL} alt="Avatar" width={45} height={45} />
                         </>
                     ) : null
                 }
-                { displayName ? <p> {displayName}</p> : null}
 
-                {
-                    createdAt ?.seconds ? (
-                        <span>
-                            { 
-                            formatRelative(new Date(createdAt.seconds * 1000) , new Date() )
-                            }
-                        </span>
-                    ) : null
-                }
-                <p>{text}</p>
+                <div>
+                    {displayName ? <p className='pd-display-name'> {displayName}</p> : null}
+
+                    {
+                        createdAt?.seconds ? (
+                            <span>
+                                {
+                                    formatRelative(new Date(createdAt.seconds * 1000), new Date())
+                                }
+                            </span>
+                        ) : null
+                    }
+                    <p className='pd-message'>{text}</p>
+                </div>
             </div>
         </>
     )

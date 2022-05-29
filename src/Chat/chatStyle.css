@@ -1,5 +1,9 @@
+
+body{
+    background: #404047;
+}
 .pd-google-sign-wrapper{
-    background-color: #222222;
+    background-color: #404047;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,6 +18,122 @@
     color: white;
 }
 
+.pd-chat-box{
+    background: #404047;
+    color: white;
+}
+
 .pd-chat-box li{
     list-style: none;
 }
+
+.pd-chat-box .pd-chat-header{
+    padding: 20px 40px;
+    box-shadow: 0px 3px 13px -11px black;
+    text-align: right;
+}
+
+.pd-chat-box .pd-chat-header button{
+    padding: 10px 50px;
+    background: #a92a2a;
+    color: white;
+}
+
+.pd-chat-box-messages h4{
+    text-align: center;
+    font-weight: 100;
+    background: #333334;
+    padding: 50px 0;
+    margin-bottom: 25px;
+}
+
+.pd-chat-box-messages .pd-message-item{ 
+    display: flex;
+    margin: 0px 0;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 22px 0;
+}
+
+.pd-chat-box-messages .pd-display-name{
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+    background: #489ea7;
+    padding: 2px 20px;
+    border-radius: 13px;
+    margin-bottom: 4px;
+}
+
+.pd-chat-box-messages ul li div span{
+    font-size: 12px;
+    color: gray;
+    top: -3px;
+    display: inline-block;
+    margin-left: 9px;
+    position: relative;
+}
+
+.pd-chat-box-messages .pd-message-item img{ 
+    margin-right: 10px;
+    border-radius: 100%;
+    border: 2px solid #919191;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.pd-chat-box-messages .pd-message{
+    margin-top: 2px;
+    font-weight: 100;
+}
+
+.pd-chat-box-messages p{
+    margin-bottom: 0;
+}
+
+.pd-chat-box ul{
+    height: 69vh;
+    overflow: auto;
+}
+
+.pd-chat-box .pd-send-message-form{
+    display: flex;
+    width: 100%;
+}
+
+.pd-chat-box .pd-send-message-form input{
+    width: 100%;
+    border: none !important;
+    outline: none !important;
+    padding: 10px 50px;
+    background: #333334;
+    color: white;
+}
+
+.pd-chat-box .pd-send-message-form button{
+    padding: 0 35px;    
+    background: #309dfb;
+    color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
