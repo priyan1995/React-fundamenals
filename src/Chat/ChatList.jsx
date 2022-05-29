@@ -1,4 +1,6 @@
 
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import formatRelative from 'date-fns/formatRelative';
 import React, { useState } from 'react';
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle } from 'react-bootstrap';
@@ -29,7 +31,6 @@ export const ChatList = ({
             }).catch(() => {
                 toast.error("Something went wrong!")
             })
-
     }
 
     return (
@@ -58,7 +59,9 @@ export const ChatList = ({
                     <p className='pd-message'>{text}</p>
                 </div>
 
-                <button onClick={() => handleOpenModal()}>Delete Message</button>
+                <Button className="pd-delete-message-btn" variant="danger" onClick={() => handleOpenModal()}>
+                    <FontAwesomeIcon icon={faTrash} />
+                </Button>
 
 
 
