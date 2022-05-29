@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import firebase from 'firebase/compat/app';
 import { ChatList } from './ChatList';
+import { CreateMessageForm } from '../components/Chat/CreateMessageForm';
 
 export const Messages = ({ user = null, db = null }) => {
 
     const [messages, setMessages] = useState([]);
-    const [newMessage, setNewMessage] = useState('');
-
-    const { uid, displayName, photoURL } = user;
-
-    // console.log(db);
-    // console.log(user);
 
     useEffect(() => {
         if (db) {
@@ -32,29 +26,7 @@ export const Messages = ({ user = null, db = null }) => {
         }
     }, [db]);
 
-    console.log(messages);
-    //console.log(newMessage);
 
-    const handleOnChangeMessage = (e) => {
-        setNewMessage(e.target.value);
-    }
-
-    const handleOnSubmit = (e) => {
-        e.preventDefault();
-        setNewMessage('')
-
-        if (db) {
-            db.collection('Messages').add({
-                text: newMessage,
-                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-                uid,
-                displayName,
-                photoURL
-
-            })
-        }
-
-    }
 
     return (
         <>
@@ -68,14 +40,13 @@ export const Messages = ({ user = null, db = null }) => {
                 }
             </ul>
 
-            <form onSubmit={handleOnSubmit} className="pd-send-message-form">
-                <input
-                    type="text"
-                    value={newMessage}
-                    onChange={handleOnChangeMessage}
-                    placeholder="Type your message here..." />
-                <button type='submit' disabled={!newMessage}>Send</button>
-            </form>
+            <CreateMessageForm
+                placeholder="Type your message here..."
+                buttonText="Send"
+                db={db}
+                user={user}
+            />
+
         </>
     )
 
