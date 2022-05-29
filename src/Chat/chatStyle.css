@@ -13,3 +13,7 @@
     background: #ea4335;
     color: white;
 }
+
+.pd-chat-box li{
+    list-style: none;
+}

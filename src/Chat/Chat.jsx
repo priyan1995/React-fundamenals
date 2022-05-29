@@ -56,9 +56,11 @@ export const Chat = () => {
             {
                 user ? (
                     <>
-                        <h4>Welcome to the chat</h4>
-                        <ChatButton onClick={signOut}>Sign Out</ChatButton>
-                        <Messages user={user} db={db} />
+                        <div className='pd-chat-box'>
+                            <h4>Welcome to the chat</h4>
+                            <ChatButton onClick={signOut}>Sign Out</ChatButton>
+                            <Messages user={user} db={db} />
+                        </div>
                     </>
 
                 ) : (
