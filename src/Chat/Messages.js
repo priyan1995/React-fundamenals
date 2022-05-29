@@ -28,13 +28,14 @@ export const Messages = ({ user = null, db = null }) => {
 
 
 
+
     return (
         <>
             <ul>
                 {
                     messages.map(message => (
                         <li key={message.id}>
-                            <ChatList {...message} />
+                            <ChatList {...message} db={db} />
                         </li>
                     ))
                 }

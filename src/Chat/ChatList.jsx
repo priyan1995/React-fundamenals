@@ -1,13 +1,31 @@
 import formatRelative from 'date-fns/formatRelative';
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ChatList = ({
     createdAt = null,
     text = '',
     displayName = '',
-    photoURL = ''
+    photoURL = '',
+    id,
+    db
 
 }) => {
+
+   // console.log(db)
+
+// console.log(id)
+
+const deleteClickHandler = (msgid) => {
+    db.collection('Messages').doc(msgid).delete()
+    .then(()=>{
+        toast("Message Deleted!");
+    }).catch(()=>{
+        toast.error("Something went wrong!")
+    })
+}
+
     return (
         <>
             <div className='pd-message-item'>
@@ -33,7 +51,13 @@ export const ChatList = ({
                     }
                     <p className='pd-message'>{text}</p>
                 </div>
+
+                <button onClick={() => deleteClickHandler(id)}>Delete Message</button>
+
+               
+
             </div>
+            <ToastContainer />
         </>
     )
 }
