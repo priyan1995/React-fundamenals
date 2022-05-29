@@ -1,9 +1,9 @@
 import React from 'react';
 import firebase from 'firebase/compat/app';
 
-const auth = firebase.auth();
 
-export const googleSignIn = async () => {
+
+export const googleSignIn = async (auth) => {
     //retrieve google provider object
     const provider = new firebase.auth.GoogleAuthProvider();
     //set language to the default browser preference

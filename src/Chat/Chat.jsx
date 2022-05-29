@@ -6,12 +6,13 @@ import 'firebase/compat/firestore';
 import { ChatButton } from '../components/Chat/ChatButton';
 import { Messages } from './Messages';
 import { chatServiceFirebase } from '../services/firebaseService';
-import { googleSignIn } from '../components/Chat/SignInWithGoogle';
 import { chatSignOut } from '../components/Chat/ChatSignOut';
-
+import { googleSignIn } from '../components/Chat/SignInWithGoogle';
+import './chatStyle.css';
 
 
 chatServiceFirebase();
+
 
 const auth = firebase.auth();
 const db = firebase.firestore();
@@ -37,11 +38,9 @@ export const Chat = () => {
         return unsubscribe;
     }, [])
 
-    const signInWithGoogle = () => {
-        googleSignIn();
+    const signInWithGoogle = async () => {
+        googleSignIn(auth);
     }
-
-
 
     const signOut = async () => {
         chatSignOut();
@@ -65,7 +64,9 @@ export const Chat = () => {
                 ) : (
 
                     <>
-                        <ChatButton onClick={signInWithGoogle}>Sign In With Google</ChatButton>
+                        <div className='pd-google-sign-wrapper'>
+                            <ChatButton onClick={signInWithGoogle}>Sign In With Google</ChatButton>
+                        </div>
                     </>
 
                 )

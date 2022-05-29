@@ -1,0 +1,15 @@
+.pd-google-sign-wrapper{
+    background-color: #222222;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pd-google-sign-wrapper button{
+    text-align: center;
+    padding: 20px 50px 22px;
+    font-size: 20px;
+    background: #ea4335;
+    color: white;
+}
