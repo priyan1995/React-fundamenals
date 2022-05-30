@@ -3,9 +3,10 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import formatRelative from 'date-fns/formatRelative';
 import React, { useState } from 'react';
-import { Button, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle } from 'react-bootstrap';
-import { toast, ToastContainer } from 'react-toastify';
+import { Button } from 'react-bootstrap';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { DeleteMessageConfirmationModel } from '../components/Chat/DeleteMessageConfirmationModal';
 import { deleteMessage } from '../services/deleteMessageService';
 
 export const ChatList = ({
@@ -23,7 +24,7 @@ export const ChatList = ({
     const handleCloseModal = () => setOpenModal(false);
 
     const deleteClickHandler = (msgid) => {
-       deleteMessage(msgid,db);
+        deleteMessage(msgid, db);
     }
 
     return (
@@ -56,25 +57,17 @@ export const ChatList = ({
                     <FontAwesomeIcon icon={faTrash} />
                 </Button>
 
-
-
             </div>
+            
             <ToastContainer />
 
-            <Modal show={openModal} onHide={handleCloseModal}>
-                <ModalHeader closeButton>
-                    <ModalTitle>Delete Message</ModalTitle>
-                </ModalHeader>
-                <ModalBody>Are you sure want to delete this message ?</ModalBody>
-                <ModalFooter>
-                    <Button variant='primary' onClick={() => deleteClickHandler(id)}>
-                        Yes
-                    </Button>
-                    <Button variant='danger' onClick={handleCloseModal}>
-                        No
-                    </Button>
-                </ModalFooter>
-            </Modal>
+            <DeleteMessageConfirmationModel
+                title="Delete Message"
+                body="Are you sure want to delete this message ?"
+                deleteClickHandler={() => deleteClickHandler(id)}
+                handleCloseModal={handleCloseModal}
+                openModal={openModal}
+            />
 
 
         </>
