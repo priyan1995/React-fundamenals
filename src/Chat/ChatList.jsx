@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle } from 'react-bootstrap';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { deleteMessage } from '../services/deleteMessageService';
 
 export const ChatList = ({
     createdAt = null,
@@ -22,15 +23,7 @@ export const ChatList = ({
     const handleCloseModal = () => setOpenModal(false);
 
     const deleteClickHandler = (msgid) => {
-        db.collection('Messages').doc(msgid).delete()
-            .then(() => {
-                toast.warn("Message Deleted!", {
-                    theme: "dark",
-                    autoClose: 1000
-                })
-            }).catch(() => {
-                toast.error("Something went wrong!")
-            })
+       deleteMessage(msgid,db);
     }
 
     return (
