@@ -1,9 +1,12 @@
 import React from 'react';
+import { Todo } from './Todo';
+import { TodoNext7Days } from './TodoNext7Days';
 
 export const TodoList = () => {
     return (
         <>
-            <h2>TodoList</h2>
+            <Todo />
+            <TodoNext7Days />
         </>
     )
 }

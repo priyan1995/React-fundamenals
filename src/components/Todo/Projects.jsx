@@ -1,9 +1,12 @@
 import React from 'react';
+import { AddNewProjects } from './AddNewProjects';
+import { Project } from './Project';
 
 export const Projects = () => {
     return (
         <>
-            <h2>Projects</h2>
+            <AddNewProjects />
+            <Project />
         </>
     )
 }
