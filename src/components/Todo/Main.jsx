@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const Main = () => {
+export const Main = (props) => {
     return (
         <>
-            <h2>Main Todo</h2>
+            <div className='pd-main'>
+                {props.children}
+            </div>
         </>
     )
 }

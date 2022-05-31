@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const Sidebar = () => {
+export const Sidebar = (props) => {
     return(
         <>
-            <h2>Sidebar</h2>
+            <div className='pd-sidebar'>
+                {props.children}
+            </div>
         </>
     )
 }
