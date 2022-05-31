@@ -21,6 +21,7 @@ import { UserForm } from './components/User-form/UserForm';
 import { LazyLoadComponent } from './components/Lazy-Load/LazyLoad';
 import { Calculator } from './calculator';
 import { Chat } from './chat/Chat';
+import { Todo } from './todo';
 
 function App() {
 
@@ -99,6 +100,11 @@ function App() {
           <Route path="/chat">
             <Chat />
           </Route>
+
+          <Route path="/todo">
+            <Todo />
+          </Route>
+
 
 
         </Switch>

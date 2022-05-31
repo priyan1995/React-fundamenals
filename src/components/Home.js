@@ -51,6 +51,9 @@ export const Home = () => {
                         <Link to="/chat">Chat</Link>
                     </li>
                     
+                    <li>
+                        <Link to="/todo">Todo</Link>
+                    </li>
 
                 </ul>
               
