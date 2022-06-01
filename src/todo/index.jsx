@@ -7,23 +7,25 @@ import { Projects } from '../components/Todo/Projects';
 import { Sidebar } from '../components/Todo/Sidebar';
 import { TodoList } from '../components/Todo/TodoList';
 import { User } from '../components/Todo/User';
+import '././todo.css';
 
 export const Todo = () => {
     return (
         <>
-            <h2>Todo</h2>
+            <div className='pd-todo-wrapper'>
 
-            <Sidebar>
-                <User />
-                <AddNewTodo />
-                <Calendar />
-                <Projects />
-            </Sidebar>
+                <Sidebar>
+                    <User />
+                    <AddNewTodo />
+                    <Calendar />
+                    <Projects />
+                </Sidebar>
 
-            <Main>
-                <TodoList />
-                <EditTodo />
-            </Main>
+                <Main>
+                    <TodoList />
+                    <EditTodo />
+                </Main>
+            </div>
         </>
     )
 }
