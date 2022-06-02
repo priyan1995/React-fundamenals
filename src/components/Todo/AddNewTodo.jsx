@@ -27,7 +27,7 @@ export const AddNewTodo = () => {
                         <form>
 
                             <div className='text'>
-                                <h4>Add New Todo</h4>
+                                <h3>Add New Todo</h3>
                                 <input
                                     type='text'
                                     value={text}
@@ -49,21 +49,21 @@ export const AddNewTodo = () => {
                                 <div className='title'>
                                     <CalendarDate />
                                     <p>Choose a day</p>
-                                    <DatePicker
-                                        value={day}
-                                        onChange={day => setDay(day)} />
                                 </div>
+                                <DatePicker
+                                    value={day}
+                                    onChange={day => setDay(day)} />
                             </div>
 
                             <div className='pick-time'>
                                 <div className='title'>
                                     <Clock />
                                     <p>Choose a time</p>
-                                    <TimePicker
-                                        value={time}
-                                        onChange={time => setTime(time)}
-                                    />
                                 </div>
+                                <TimePicker
+                                    value={time}
+                                    onChange={time => setTime(time)}
+                                />
                             </div>
 
                             <div className='pick-project'>
@@ -71,17 +71,17 @@ export const AddNewTodo = () => {
                                     <Palette />
                                     <p>Choose a project</p>
                                 </div>
-                                <div className='projects active'>
-                                    Personal
-                                </div>
                                 <div className='projects'>
-                                    Work
+                                    <div className='project active'>
+                                        Personal
+                                    </div>
+                                    <div className='project'>
+                                        Work
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className='cancel' onClick={() => setShowModal(false)}>
-                                <X size='40' />
-                            </div>
+
 
                             <div className='confirm'>
                                 <button>+ Add to do</button>
