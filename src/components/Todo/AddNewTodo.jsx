@@ -8,7 +8,10 @@ export const AddNewTodo = () => {
     return (
         <>
             <div className='pd-add-new-todo'>
-                <button className='btn' onClick={() => setShowModal(true)}> + New Todo</button>
+
+                <div className='btn' >
+                    <button onClick={() => setShowModal(true)}> + New Todo</button>
+                </div>
 
                 <CustomModal showModal={showModal} setShowModal={setShowModal}>
                     <h4>Add New Todo</h4>

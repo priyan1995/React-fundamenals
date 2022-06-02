@@ -11,6 +11,7 @@ export const CustomModal = (props) => {
         if (e.target === modalRef.current) {
             setShowModal(false);
         }
+        console.log(modalRef.current);
     }
 
     return (
@@ -20,7 +21,7 @@ export const CustomModal = (props) => {
                     <div className='pd-modal' ref={modalRef} onClick={closeModal}>
                         <div className='container'>
                             {props.children}
-                            <button onClick={() => setShowModal(false)}>
+                            <button onClick={() => setShowModal(false)} className="pd-modal-closebtn">
                                 X
                             </button>
                         </div>
