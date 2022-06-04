@@ -238,3 +238,98 @@
   font-size: 1rem;
   cursor: pointer;
 }
+
+
+/* Projects */
+.pd-projects {
+  padding: 1rem;
+  border-bottom: 1px solid #ebebeb;
+}
+.pd-projects .header {
+  display: flex;
+  align-items: center;
+}
+.pd-projects .header .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.pd-projects .header .title p {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.pd-projects .header .btns {
+  display: flex;
+  align-items: center;
+}
+.pd-projects .header .btns span.edit {
+  margin-right: 5px;
+}
+.pd-projects .header .btns span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pd-projects .header .btns span:hover {
+  background-color: #ebebeb;
+  transition: all 300ms ease-in-out;
+}
+.pd-projects .items {
+  padding: 0.5rem;
+}
+/* Project */
+.pd-project {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  margin: 5px;
+  font-size: 1rem;
+}
+.pd-project .name {
+  cursor: pointer;
+  word-break: break-all;
+}
+.pd-project .btns {
+  display: flex;
+  align-items: center;
+}
+.pd-project .btns .total-todos {
+  position: absolute;
+  right: 0;
+  background: #ebebeb;
+  width: 25px;
+  height: 25px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.pd-project .btns .edit-delete {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.pd-project .btns .edit-delete span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 300ms ease-in-out;
+}
+.pd-project .btns .edit-delete span.edit:hover {
+  background: #acffac;
+}
+.pd-project .btns .edit-delete span.delete:hover {
+  background: #ffacac;
+}

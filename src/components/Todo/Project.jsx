@@ -13,18 +13,25 @@ export const Project = (props) => {
                 </div>
 
                 <div className='btns'>
-                    <div className='edit-delete'>
-                        <span>
-                            <Pencil size="13" />
-                        </span>
-                        <span>
-                            <XCircle size="13" />
-                        </span>
-                    </div>
+                    {
+                        props.edit ?
+                            <div className='edit-delete'>
+                                <span className='edit'>
+                                    <Pencil size="13" />
+                                </span>
+                                <span className='delete'>
+                                    <XCircle size="13" />
+                                </span>
+                            </div>
+                            :
+                            project.numOfTodos === 0 ?
+                                ""
+                                :
+                                <div className='total-todos'>
+                                    {project.numOfTodos}
+                                </div>
+                    }
 
-                    <div className='total-todos'>
-                        {project.numOfTodos}
-                    </div>
                 </div>
 
             </div>
