@@ -5,13 +5,13 @@ export const ProjectRename = (props) => {
 
     const project = props.project;
 
-    const [newProjectName, setNewProjectName] = useState('');
+    const [newProjectName, setNewProjectName] = useState(project.name);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('edit success');
     }
-    
+
     return (
         <>
             <div className='pr-rename-project'>

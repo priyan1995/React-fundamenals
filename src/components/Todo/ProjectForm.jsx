@@ -3,7 +3,7 @@ import React from 'react';
 export const ProjectForm = (props) => {
     return (
         <>
-            <form onSubmit={props.handleSubmit}>
+            <form onSubmit={props.handleSubmit} className="pd-project-form">
                 <h3>{props.heading}</h3>
 
                 <input
