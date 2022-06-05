@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ProjectForm } from './ProjectForm';
 
-export const ProjectRename = () => {
+export const ProjectRename = (props) => {
+
+    const project = props.project;
+
+    const [newProjectName, setNewProjectName] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('edit success');
+    }
+    
     return (
         <>
-            <h3>ProjectRename</h3>
+            <div className='pr-rename-project'>
+                <ProjectForm
+                    handleSubmit={handleSubmit}
+                    heading="Edit Project!"
+                    value={newProjectName}
+                    setValue={setNewProjectName}
+                    setShowModal={props.setShowModal}
+                    confirmButtonText="Confirm"
+                />
+            </div>
         </>
     )
 }
