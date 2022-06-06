@@ -1,9 +1,14 @@
 import React from 'react';
 
-export const Todo = () => {
+export const Todo = (props) => {
+
+    const todo = props.todo;
+
     return (
         <>
-           <h2>Todo</h2>
+            <div className='todo'>
+                {todo.text}
+            </div>
         </>
     )
 }
