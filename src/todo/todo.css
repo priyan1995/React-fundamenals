@@ -29,6 +29,7 @@
   background-image: url("./images/todo_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 /* pd-user */
@@ -381,4 +382,32 @@
 }
 .pd-project-form button:hover {
   filter: brightness(1.1);
+}
+
+
+/* Todos */
+.pd-todo-list {
+  width: 450px;
+  height: 80%;
+  background-color: white;
+
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+
+  border-radius: 4px;
+  opacity: 0.9;
+
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+.pd-todo-list .selected-project {
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eeeeee;
+}
+.pd-todo-list .todos {
+  overflow-y: auto;
 }
