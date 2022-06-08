@@ -14,7 +14,7 @@ export const TodoList = () => {
             date: "06/03/2021",
             day: "6",
             checked: false,
-            color: '#000000',
+            color: '#00ff00',
             project: 'personal'
         },
         {
