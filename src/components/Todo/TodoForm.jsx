@@ -62,30 +62,21 @@ export const TodoForm = ({
                         />
                     </div>
 
-                    {/* <div className='pick-project'>
+                    <div className='pick-project'>
                         <div className='title'>
                             <Palette />
                             <p>Choose a project</p>
                         </div>
                         <div className='projects'>
-                            <div className='project active'>
-                                Personal
-                            </div>
-                            <div className='project'>
-                                Work
-                            </div>
+                            {
+                                projects.map(project =>
+                                    <div className='project' key={project.id}>
+                                        {project.name}
+                                    </div>
+                                )
+                            }
                         </div>
-                    </div> */}
-
-
-                    {
-                        projects.map(project =>
-                            <div className='project' key={project.id}>
-                                {project.name}
-                            </div>
-                        )
-                    }
-
+                    </div>
 
                     {
                         showButtons &&
@@ -94,7 +85,6 @@ export const TodoForm = ({
                         </div>
 
                     }
-
 
 
                 </form>

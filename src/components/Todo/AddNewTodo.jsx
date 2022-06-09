@@ -18,8 +18,9 @@ export const AddNewTodo = () => {
         { id: 3, name: "other", numOfTodos: 2 },
     ]
 
-    const handleSubmit = () => {
-        console.log("submitted")
+    const handleSubmit = (e) => {
+        console.log("submitted");
+        e.preventDefault();
     }
 
 

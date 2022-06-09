@@ -17,8 +17,9 @@ export const EditTodo = () => {
     ]
 
     
-    const handleSubmit = () => {
-        console.log("submitted")
+    const handleSubmit = (e) => {
+        console.log("submitted");
+        e.preventDefault(e);
     }
 
 
