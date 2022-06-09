@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { CalendarDate, CaretUp } from 'react-bootstrap-icons';
+import { TodoContext } from '../../context/TodoContext';
 
 export const Calendar = () => {
+
+    const { setSelectedProject } = useContext(TodoContext);
 
     const calendarItems = ['today', 'next 7 days', 'all days'];
     return (
@@ -22,7 +25,11 @@ export const Calendar = () => {
                 <div className='items'>
                     {
                         calendarItems.map(item =>
-                            <div className='item' key={item}>
+                            <div
+                                className='item'
+                                key={item}
+                                onClick={() => setSelectedProject(item)}
+                            >
                                 {item}
                             </div>
                         )
