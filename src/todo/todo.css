@@ -389,9 +389,9 @@
 /* Todos */
 .pd-todo-list {
   width: 450px;
-  height: 80%;
+  height: 85%;
   background-color: white;
-
+  overflow: auto;
   position: absolute;
   bottom: 40px;
   left: 40px;
@@ -461,8 +461,8 @@
   left: calc(40px + 450px + 40px);
 
   background-color: white;
-
-  height: 80%;
+  overflow: auto;
+  height: 85%;
   width: 450px;
 
   border-radius: 4px;

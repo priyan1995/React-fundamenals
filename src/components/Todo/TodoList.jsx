@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TodoContext, TodoContextProvider } from '../../context/TodoContext';
 import { Todo } from './Todo';
 import { TodoNext7Days } from './TodoNext7Days';
 
 export const TodoList = () => {
 
-    const selectedProject = "today";
+    const { selectedProject } = useContext(TodoContext);
 
     const todos = [
         {

@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Pencil, XCircle } from 'react-bootstrap-icons';
+import { TodoContext } from '../../context/TodoContext';
 import { CustomModal } from '../Common-Components/Modal';
 import { ProjectRename } from './ProjectRename';
 
 export const Project = (props) => {
+
+    const { setSelectedProject } = useContext(TodoContext);
+
     const [showModal, setShowModal] = useState(false);
     const project = props.project;
 
@@ -11,7 +15,10 @@ export const Project = (props) => {
         <>
             <div className='pd-project'>
 
-                <div className='name'>
+                <div 
+                className='name'
+                onClick={()=> setSelectedProject(project.name)}
+                >
                     {project.name}
                 </div>
 
