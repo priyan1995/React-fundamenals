@@ -10,10 +10,10 @@ export const Todo = (props) => {
     return (
         <>
             <div className='todo'>
-                <div 
-                className='todo-container'
-                onMouseEnter={()=>setHover(true)}
-                onMouseLeave={()=>setHover(false)}
+                <div
+                    className='todo-container'
+                    onMouseEnter={() => setHover(true)}
+                    onMouseLeave={() => setHover(false)}
                 >
                     <div className='check-todo'>
                         {
@@ -47,7 +47,7 @@ export const Todo = (props) => {
 
                     <div className='delete-todo'>
                         {
-                           ( hover || todo.checked ) &&
+                            (hover || todo.checked) &&
                             <span>
                                 <Trash />
                             </span>
