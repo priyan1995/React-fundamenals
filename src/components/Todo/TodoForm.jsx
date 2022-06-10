@@ -70,6 +70,7 @@ export const TodoForm = ({
                         </div>
                         <div className='projects'>
                             {
+                                projects.length > 0 ?
                                 projects.map(project =>
                                     <div 
                                     className={`project ${ todoProject === project.name ? 'active' : '' }`}
@@ -78,7 +79,8 @@ export const TodoForm = ({
                                      >
                                         {project.name}
                                     </div>
-                                )
+                                ) :
+                                 <div style={{color: '#ff0000'}}> Please add a project </div>
                             }
                         </div>
                     </div>
