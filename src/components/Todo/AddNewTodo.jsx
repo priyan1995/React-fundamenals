@@ -18,6 +18,8 @@ export const AddNewTodo = () => {
         { id: 3, name: "other", numOfTodos: 2 },
     ]
 
+    const [todoProject, setTodoProject] = useState();
+
     const handleSubmit = (e) => {
         console.log("submitted");
         e.preventDefault();
@@ -45,6 +47,8 @@ export const AddNewTodo = () => {
                         setTime={setTime}
                         projects={projects}
                         showButtons={true}
+                        todoProject={todoProject}
+                        setTodoProject={setTodoProject}
                     />
 
                 </CustomModal>

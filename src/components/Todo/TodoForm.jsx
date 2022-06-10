@@ -10,7 +10,8 @@ export const TodoForm = ({
     day, setDay,
     time, setTime,
     handleSubmit,
-    projects
+    projects,
+    todoProject, setTodoProject
 }) => {
 
     return (
@@ -70,7 +71,11 @@ export const TodoForm = ({
                         <div className='projects'>
                             {
                                 projects.map(project =>
-                                    <div className='project' key={project.id}>
+                                    <div 
+                                    className={`project ${ todoProject === project.name ? 'active' : '' }`}
+                                     key={project.id}
+                                     onClick={()=>setTodoProject(project.name)}
+                                     >
                                         {project.name}
                                     </div>
                                 )
