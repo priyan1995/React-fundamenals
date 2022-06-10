@@ -5,10 +5,11 @@ import { TodoForm } from './TodoForm';
 
 export const EditTodo = () => {
 
-    
+
     const [text, setText] = useState();
     const [day, setDay] = useState();
     const [time, setTime] = useState();
+    const [todoProject, setTodoProject] = useState();
 
     const projects = [
         { id: 1, name: "personal", numOfTodos: 0 },
@@ -16,7 +17,7 @@ export const EditTodo = () => {
         { id: 3, name: "other", numOfTodos: 2 },
     ]
 
-    
+
     const handleSubmit = (e) => {
         console.log("submitted");
         e.preventDefault(e);
@@ -39,7 +40,10 @@ export const EditTodo = () => {
                         time={time}
                         setTime={setTime}
                         projects={projects}
-                        showButtons={true} />
+                        showButtons={true}
+                        todoProject={todoProject}
+                        setTodoProject={setTodoProject}
+                    />
 
                 </div>
             </div>
