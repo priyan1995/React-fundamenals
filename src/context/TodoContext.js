@@ -19,7 +19,7 @@ const TodoContextProvider = ({children}) => {
                     selectedProject,
                     setSelectedProject,
                     todos,
-                    projects
+                     projects
                 }
             }>
             {children}

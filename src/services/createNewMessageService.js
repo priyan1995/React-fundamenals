@@ -1,4 +1,4 @@
-import firebase from 'firebase/compat/app';
+import firebase from 'firebase/app';
 
 export function createNewMessage(db,newMessage,uid, displayName, photoURL){
     db.collection('Messages').add({

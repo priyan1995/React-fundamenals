@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/auth';
-import 'firebase/compat/firestore';
+import firebaseInitialize from "../services/todoFirebaseService";
+import 'firebase/firestore';
 
 export function useTodos(){
+
+    
     const [todos, setTodos] = useState([]);
 
     useEffect(()=>{
 
-        let unsubscribe = firebase
+        let unsubscribe = firebaseInitialize
         .firestore()
         .collection('todos')
         .onSnapshot( snapshot => {
