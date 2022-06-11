@@ -4,13 +4,15 @@ import { useTodos } from '../hooks/useTodos';
 
 const TodoContext = createContext();
 
-const TodoContextProvider = ({children}) => {
+const TodoContextProvider = ({ children }) => {
 
     const defaultProject = 'today';
     const [selectedProject, setSelectedProject] = useState(defaultProject);
-    const todos = useTodos();
-    const projects = useProjects(todos);
-    
+    // const todos = useTodos();
+    // const projects = useProjects(todos);
+
+  
+
 
     return (
         <TodoContext.Provider
@@ -18,8 +20,8 @@ const TodoContextProvider = ({children}) => {
                 {
                     selectedProject,
                     setSelectedProject,
-                    todos,
-                     projects
+                    // todos,
+                    // projects
                 }
             }>
             {children}
@@ -27,4 +29,4 @@ const TodoContextProvider = ({children}) => {
     )
 }
 
-export {TodoContextProvider, TodoContext }
+export { TodoContextProvider, TodoContext }
