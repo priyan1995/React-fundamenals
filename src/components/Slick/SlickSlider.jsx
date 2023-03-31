@@ -13,10 +13,10 @@ export const SlickSlider = () => {
     return (
         <>
 
-        <SsSlider
-        sliderData={sliderImages}
-        sliderWrapperClass="pd-slick-sl"
-        />
+            <SsSlider
+                sliderData={sliderImages}
+                sliderWrapperClass="pd-slick-sl"
+            />
 
             <div className='pd-back-bread'>
                 <Link to='/'>Home</Link>

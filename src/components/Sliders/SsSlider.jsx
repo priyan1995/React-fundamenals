@@ -8,7 +8,7 @@ export const SsSlider = (props) => {
     var settings = SliderSettings;
     const sliderImages = props.sliderData;
     const wrapperClass = props.sliderWrapperClass;
-    
+
     return (
         <>
 
